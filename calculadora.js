@@ -10,6 +10,7 @@ onload=()=>{
     document.querySelector('#bt-8').onclick = ()=> digito(8);
     document.querySelector('#bt-9').onclick = ()=> digito(9);
     document.querySelector('#bt-comma').onclick = ()=> virgula();
+    document.querySelector('#bt-ac').onclick = ()=>
 
 }
 
@@ -32,7 +33,7 @@ const digito =(n)=>{
     atualizaVisor();      
 }
 
-//tratamento de clic no botão de ponto decimal
+//tratamento de clique no botão de ponto decimal
 const virgula=()=>{
     if(novoNumero){
         sValor='0, ';
@@ -41,3 +42,10 @@ const virgula=()=>{
         sValor+=','
     atualizaVisor
 }
+
+// parei a aula no tempo 32:55 implantação do botão AC
+
+const AC=()=>{
+    
+}
+
