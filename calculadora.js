@@ -10,7 +10,7 @@ onload=()=>{
     document.querySelector('#bt-8').onclick = ()=> digito(8);
     document.querySelector('#bt-9').onclick = ()=> digito(9);
     document.querySelector('#bt-comma').onclick = ()=> virgula();
-    document.querySelector('#bt-ac').onclick = ()=>
+    document.querySelector('#bt-ac').onclick = ()=> AC();
 
 }
 
@@ -19,9 +19,12 @@ onload=()=>{
 let sValor='0'
 let novoNumero=true;
 
+//atualizçaão do visor
 const atualizaVisor=()=>{
+    let [parteInteira, parteDecimal] = sValor.split(',');
+   
     document.getElementById('display').innerHTML=sValor;
-}
+};
 
 //função do tratamento de botões de numeros
 const digito =(n)=>{
@@ -43,9 +46,13 @@ const virgula=()=>{
     atualizaVisor
 }
 
-// parei a aula no tempo 32:55 implantação do botão AC
+// parei a aula no tempo 39:00 implantação do botão AC
 
 const AC=()=>{
-    
-}
+    novoNumero=true;
+    sValor='0';
+    atualizaVisor();
+
+
+};
 
